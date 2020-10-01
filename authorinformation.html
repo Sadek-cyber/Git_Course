@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC>
+<head>
+<!-- import this code from test8 -->
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.FirstName1.value == "") {alert('First Name is required.');frm.FirstName1.focus();return false;}
+if (frm.FirstName2.value == "") {alert('second Name is required.');frm.FirstName2.focus();return false;}
+if (frm.FirstName3.value == "") {alert('third Name is required.');frm.FirstName3.focus();return false;}
+if (frm.LastName1.value == "") {alert('Last Name 1 is required.');frm.LastName1.focus();return false;}
+if (frm.LastName2.value == "") {alert('Last Name 2 is required.');frm.LastName2.focus();return false;}
+if (frm.LastName3.value == "") {alert('Last Name 3 is required.');frm.LastName3.focus();return false;}
+if (frm.FromEmailAddress1.value == "") {alert('Email address 1 is required.');frm.FromEmailAddress1.focus();return false;}
+if (frm.FromEmailAddress1.value.indexOf("@") < 1 || frm.FromEmailAddress1.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress1.focus();return false;}
+if (frm.FromEmailAddress2.value == "") {alert('Email address 2 is required.');frm.FromEmailAddress2.focus();return false;}
+if (frm.FromEmailAddress2.value.indexOf("@") < 1 || frm.FromEmailAddress2.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress2.focus();return false;}
+if (frm.FromEmailAddress3.value == "") {alert('Email address 3 is required.');frm.FromEmailAddress3.focus();return false;}
+if (frm.FromEmailAddress3.value.indexOf("@") < 1 || frm.FromEmailAddress3.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress3.focus();return false;}
+if (frm.Country1.value == "") {alert('Country 1 is required.');frm.Country1.focus();return false;}
+if (frm.Country2.value == "") {alert('Country 2 is required.');frm.Country2.focus();return false;}
+if (frm.Country3.value == "") {alert('Country 3 is required.');frm.Country3.focus();return false;}
+if (frm.Organization1.value == "") {alert('Organization 1 is required.');frm.Organization1.focus();return false;}
+if (frm.Organization2.value == "") {alert('Organization 2 is required.');frm.Organization2.focus();return false;}
+if (frm.Organization3.value == "") {alert('Organization 3 is required.');frm.Organization3.focus();return false;}
+if (frm.title.value == "") {alert('Title is required.');frm.title.focus();return false;}
+if (frm.abstract.value == "") {alert('Abstract is required.');frm.abstract.focus();return false;}
+if (frm.keyword.value == "") {alert('Keyword is required.');frm.keyword.focus();return false;}
+//if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+return true; }
+//reload image function
+/*function ReloadCaptchaImage(captchaImageId) {
+var obj = document.getElementById(captchaImageId);
+var src = obj.src;
+var date = new Date();
+var pos = src.indexOf('&rad=');
+if (pos >= 0) { src = src.substr(0, pos); }
+obj.src = src + '&rad=' + date.getTime();
+return false; }*/
+</script>
+<title>Registration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="topbar">
+    <!--<div id="clientlogin">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Login</legend>
+          <input type="text" value="Email&hellip;"  onfocus="this.value=(this.value=='Email&hellip;')? '' : this.value ;" />
+          <input type="text" value="Password&hellip;"  onfocus="this.value=(this.value=='Password&hellip;')? '' : this.value ;" />
+          <input type="submit" name="login" id="login" value="GO" />
+        </fieldset>
+      </form>
+    </div>-->
+    <div id="search">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="GO" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>                     
+<div class="wrapper col2">
+<div><img src="images/cairoUn.png" alt="Cairo Logo" width="100" height="100" align="left" style="padding-left: 4%;" /></div>
+<div><img src="images/issr.png" alt="ISSR Logo" width="90" height="90" align="right" style="padding-right: 4%;" /></div>
+  <div id="header">
+    <div id="logo">
+	  <h1>Cairo University</h1>
+      <h1><a href="http://issr.cu.edu.eg/en/">ISSR</a></h1>
+      <p>The Conference System</p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="http://127.0.0.1:8887/home/master_project/mainhomepage.html">Home page</a>
+          <ul>
+            <li><a href="#">Introduction</a></li>
+            <li><a href="#">Previous achievements</a></li>
+            <li><a href="#">General Terms</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:8887/home/master_project/policy.php">Policy</a>
+          <ul>
+            <li><a href="#">using ISSR Conf</a></li>
+            <li><a href="#">Other Requirements</a></li>
+            <li><a href="#">Write A Comment</a></li>
+          </ul>
+        </li>
+        <li><a href="http://127.0.0.1:8887/home/master_project/contactus.html">Contact Us</a>
+          <ul>
+            <li><a href="#">Contacting ISSR Conf</a></li>
+            <li><a href="#">How To Find Us</a></li>
+            <li><a href="#">Quick Links</a></li>
+          </ul>
+        </li>
+        <li><a class="active" href="http://127.0.0.1:8887/home/master_project/authorinformation.html">Registration</a>
+          <ul>
+            <li><a href="#">Author Information</a></li>
+            <li><a href="#">Upload a File</a></li>
+            <li><a href="#">Send your Research</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div><div class="wrapper col3">
+  <div id="intro">
+    <div class="fl_left">
+        <h1>Author Information</h1>
+        <p>For each of the authors please fill out the form below. Some items on the form are explained here:</p>
+        <p><b>• Email address</b> will only be used for communication with the authors. It will not appear in public Web pages of thisconference. The email address can be omitted for authors who are not corresponding. These authors will also have no accessto the submission page.</p>
+        <p><b>• Web site</b> can be used on the conference Web pages, for example, for making the program. It should be a Web site of theauthor, not the Web site of her or his organization.</p>
+        <p>• Each author marked as a <b>corresponding author</b> will receive email messages from the system about this submission. Theremust be at least one corresponding author.</p>
+        <p>• One of the authors should be marked as a <b>speaker</b>. If you are not sure, choose your best guess.</p>
+		<form action="authorinformation-connect.php" method="post" onsubmit="return ValidateForm(this);" enctype="multipart/form-data">
+             <!-- Main Table which subbmit the all values-->
+            <table border="0" cellpadding="5" cellspacing="0" width="600" bordercolor="" frame="box" bgcolor="">
+				<h2>Author 1</h2>
+                <tr><!-- First Row contains one table -->
+                    <table frame="""box">
+                        <tr>
+                            <td><b>First name (*):</b></td>
+                            <td><input id="FirstName1" name="FirstName1" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Last name (*):</b></td>
+                            <td><input id="LastName1" name="LastName1" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Email address(*):</b></td>
+							<td><input id="FromEmailAddress1" name="FromEmailAddress1" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Country(*):</b></td>
+							<td><select id="Country1" name="Country1" maxlength="120" style="width:250px; border:1px solid #999999">
+									<option value="">-- Choose--</option><option value="1">Afghanistan</option><option value="2">Åland Islands</option><option value="3">Albania</option><option value="4">Algeria</option><option value="5">American Samoa</option><option value="6">Andorra</option><option value="7">Angola</option><option value="8">Anguilla</option><option value="9">Antarctica</option><option value="10">Antigua and Barbuda</option><option value="11">Argentina</option><option value="12">Armenia</option><option value="13">Aruba</option><option value="14">Australia</option><option value="15">Austria</option><option value="16">Azerbaijan</option><option value="17">Bahamas</option><option value="18">Bahrain</option><option value="19">Bangladesh</option><option value="20">Barbados</option><option value="21">Belarus</option><option value="22">Belgium</option><option value="23">Belize</option><option value="24">Benin</option><option value="25">Bermuda</option><option value="26">Bhutan</option><option value="27">Bolivia, Plurinational State of</option><option value="28">Bonaire, Sint Eustatius and Saba</option><option value="29">Bosnia and Herzegovina</option><option value="30">Botswana</option><option value="31">Bouvet Island</option><option value="32">Brazil</option><option value="33">British Indian Ocean Territory</option><option value="34">Brunei Darussalam</option><option value="35">Bulgaria</option><option value="36">Burkina Faso</option><option value="37">Burundi</option><option value="38">Cambodia</option><option value="39">Cameroon</option><option value="40">Canada</option><option value="41">Cape Verde</option><option value="42">Cayman Islands</option><option value="43">Central African Republic</option><option value="44">Chad</option><option value="45">Chile</option><option value="46">China</option><option value="47">Christmas Island</option><option value="48">Cocos array(Keeling) Islands</option><option value="49">Colombia</option><option value="50">Comoros</option><option value="51">Congo</option><option value="52">Congo, the Democratic Republic of the</option><option value="53">Cook Islands</option><option value="54">Costa Rica</option><option value="55">Côte d'Ivoire</option><option value="56">Croatia</option><option value="57">Cuba</option><option value="58">Curaçao</option><option value="59">Cyprus</option><option value="60">Czech Republic</option><option value="61">Denmark</option><option value="62">Djibouti</option><option value="63">Dominica</option><option value="64">Dominican Republic</option><option value="65">Ecuador</option><option value="66">Egypt</option><option value="67">El Salvador</option><option value="68">Equatorial Guinea</option><option value="69">Eritrea</option><option value="70">Estonia</option><option value="71">Ethiopia</option><option value="72">Falkland Islands array(Malvinas)</option><option value="73">Faroe Islands</option><option value="74">Fiji</option><option value="75">Finland</option><option value="76">France</option><option value="77">French Guiana</option><option value="78">French Polynesia</option><option value="79">French Southern Territories</option><option value="80">Gabon</option><option value="81">Gambia</option><option value="82">Georgia</option><option value="83">Germany</option><option value="84">Ghana</option><option value="85">Gibraltar</option><option value="86">Greece</option><option value="87">Greenland</option><option value="88">Grenada</option><option value="89">Guadeloupe</option><option value="90">Guam</option><option value="91">Guatemala</option><option value="92">Guernsey</option><option value="93">Guinea</option><option value="94">Guinea-Bissau</option><option value="95">Guyana</option><option value="96">Haiti</option><option value="97">Heard Island and McDonald Islands</option><option value="98">Holy See array(Vatican City State)</option><option value="99">Honduras</option><option value="100">Hong Kong</option><option value="101">Hungary</option><option value="102">Iceland</option><option value="103">India</option><option value="104">Indonesia</option><option value="105">Iran, Islamic Republic of</option><option value="106">Iraq</option><option value="107">Ireland</option><option value="108">Isle of Man</option><option value="109">Israel</option><option value="110">Italy</option><option value="111">Jamaica</option><option value="112">Japan</option><option value="113">Jersey</option><option value="114">Jordan</option><option value="115">Kazakhstan</option><option value="116">Kenya</option><option value="117">Kiribati</option><option value="118">Korea, Democratic People's Republic of</option><option value="119">Korea, Republic of</option><option value="120">Kuwait</option><option value="121">Kyrgyzstan</option><option value="122">Lao People's Democratic Republic</option><option value="123">Latvia</option><option value="124">Lebanon</option><option value="125">Lesotho</option><option value="126">Liberia</option><option value="127">Libya</option><option value="128">Liechtenstein</option><option value="129">Lithuania</option><option value="130">Luxembourg</option><option value="131">Macao</option><option value="132">Macedonia, The Former Yugoslav Republic of</option><option value="133">Madagascar</option><option value="134">Malawi</option><option value="135">Malaysia</option><option value="136">Maldives</option><option value="137">Mali</option><option value="138">Malta</option><option value="139">Marshall Islands</option><option value="140">Martinique</option><option value="141">Mauritania</option><option value="142">Mauritius</option><option value="143">Mayotte</option><option value="144">Mexico</option><option value="145">Micronesia, Federated States of</option><option value="146">Moldova, Republic of</option><option value="147">Monaco</option><option value="148">Mongolia</option><option value="149">Montenegro</option><option value="150">Montserrat</option><option value="151">Morocco</option><option value="152">Mozambique</option><option value="153">Myanmar</option><option value="154">Namibia</option><option value="155">Nauru</option><option value="156">Nepal</option><option value="157">Netherlands</option><option value="158">New Caledonia</option><option value="159">New Zealand</option><option value="160">Nicaragua</option><option value="161">Niger</option><option value="162">Nigeria</option><option value="163">Niue</option><option value="164">Norfolk Island</option><option value="165">Northern Mariana Islands</option><option value="166">Norway</option><option value="167">Oman</option><option value="168">Pakistan</option><option value="169">Palau</option><option value="170">Palestine, State of</option><option value="171">Panama</option><option value="172">Papua New Guinea</option><option value="173">Paraguay</option><option value="174">Peru</option><option value="175">Philippines</option><option value="176">Pitcairn</option><option value="177">Poland</option><option value="178">Portugal</option><option value="179">Puerto Rico</option><option value="180">Qatar</option><option value="181">Réunion</option><option value="182">Romania</option><option value="183">Russian Federation</option><option value="184">Rwanda</option><option value="185">Saint Barthélemy</option><option value="186">Saint Helena, Ascension and Tristan da Cunha</option><option value="187">Saint Kitts and Nevis</option><option value="188">Saint Lucia</option><option value="189">Saint Martin array(French part)</option><option value="190">Saint Pierre and Miquelon</option><option value="191">Saint Vincent and the Grenadines</option><option value="192">Samoa</option><option value="193">San Marino</option><option value="194">Sao Tome and Principe</option><option value="195">Saudi Arabia</option><option value="196">Senegal</option><option value="197">Serbia</option><option value="198">Seychelles</option><option value="199">Sierra Leone</option><option value="200">Singapore</option><option value="201">Sint Maarten array(Dutch part)</option><option value="202">Slovakia</option><option value="203">Slovenia</option><option value="204">Solomon Islands</option><option value="205">Somalia</option><option value="206">South Africa</option><option value="207">South Georgia and the South Sandwich Islands</option><option value="208">South Sudan</option><option value="209">Spain</option><option value="210">Sri Lanka</option><option value="211">Sudan</option><option value="212">Suriname</option><option value="213">Svalbard and Jan Mayen</option><option value="214">Swaziland</option><option value="215">Sweden</option><option value="216">Switzerland</option><option value="217">Syrian Arab Republic</option><option value="218">Taiwan, Province of China</option><option value="219">Tajikistan</option><option value="220">Tanzania, United Republic of</option><option value="221">Thailand</option><option value="222">Timor-Leste</option><option value="223">Togo</option><option value="224">Tokelau</option><option value="225">Tonga</option><option value="226">Trinidad and Tobago</option><option value="227">Tunisia</option><option value="228">Turkey</option><option value="229">Turkmenistan</option><option value="230">Turks and Caicos Islands</option><option value="231">Tuvalu</option><option value="232">Uganda</option><option value="233">Ukraine</option><option value="234">United Arab Emirates</option><option value="235">United Kingdom</option><option value="236">United States</option><option value="237">United States Minor Outlying Islands</option><option value="238">Uruguay</option><option value="239">Uzbekistan</option><option value="240">Vanuatu</option><option value="241">Venezuela, Bolivarian Republic of</option><option value="242">Viet Nam</option><option value="243">Virgin Islands, British</option><option value="244">Virgin Islands, U.S.</option><option value="245">Wallis and Futuna</option><option value="246">Western Sahara</option><option value="247">Yemen</option><option value="248">Zambia</option><option value="249">Zimbabwe</option>				
+								</select>
+							</td>
+						</tr>
+						<tr>
+						<tr>
+							<td><b>Organization(*):</b></td>
+							<td><input id="Organization1" name="Organization1" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Web site:</b></td>
+							<td><input id="website1" name="website1" type="text" maxlength="43" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  name="mycheckbox[]" value="" /><b>corresponding autho</b>r<br /><br /></td>
+							<td></td>
+						</tr>
+					</table>					
+				</tr>
+				<br />
+				<br />
+				<h2>Author 2 </h2>
+				<tr><!-- second Row contains one table -->
+					<table border="0" cellpadding="5" cellspacing="0" width="600" bordercolor="black" frame="box">
+						<tr>
+							<td><b>First name (*):</b></td>
+							<td><input id="FirstName2" name="FirstName2" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Last name (*):</b></td>
+							<td><input id="LastName2" name="LastName2" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Email address(*):</b></td>
+							<td><input id="FromEmailAddress2" name="FromEmailAddress2" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Country(*):</b></td>
+							<td><select id="Country2" name="Country2" maxlength="120" style="width:250px; border:1px solid #999999"> 
+                                    <option value="">-- Choose--</option><option value="1">Afghanistan</option><option value="2">Åland Islands</option><option value="3">Albania</option><option value="4">Algeria</option><option value="5">American Samoa</option><option value="6">Andorra</option><option value="7">Angola</option><option value="8">Anguilla</option><option value="9">Antarctica</option><option value="10">Antigua and Barbuda</option><option value="11">Argentina</option><option value="12">Armenia</option><option value="13">Aruba</option><option value="14">Australia</option><option value="15">Austria</option><option value="16">Azerbaijan</option><option value="17">Bahamas</option><option value="18">Bahrain</option><option value="19">Bangladesh</option><option value="20">Barbados</option><option value="21">Belarus</option><option value="22">Belgium</option><option value="23">Belize</option><option value="24">Benin</option><option value="25">Bermuda</option><option value="26">Bhutan</option><option value="27">Bolivia, Plurinational State of</option><option value="28">Bonaire, Sint Eustatius and Saba</option><option value="29">Bosnia and Herzegovina</option><option value="30">Botswana</option><option value="31">Bouvet Island</option><option value="32">Brazil</option><option value="33">British Indian Ocean Territory</option><option value="34">Brunei Darussalam</option><option value="35">Bulgaria</option><option value="36">Burkina Faso</option><option value="37">Burundi</option><option value="38">Cambodia</option><option value="39">Cameroon</option><option value="40">Canada</option><option value="41">Cape Verde</option><option value="42">Cayman Islands</option><option value="43">Central African Republic</option><option value="44">Chad</option><option value="45">Chile</option><option value="46">China</option><option value="47">Christmas Island</option><option value="48">Cocos array(Keeling) Islands</option><option value="49">Colombia</option><option value="50">Comoros</option><option value="51">Congo</option><option value="52">Congo, the Democratic Republic of the</option><option value="53">Cook Islands</option><option value="54">Costa Rica</option><option value="55">Côte d'Ivoire</option><option value="56">Croatia</option><option value="57">Cuba</option><option value="58">Curaçao</option><option value="59">Cyprus</option><option value="60">Czech Republic</option><option value="61">Denmark</option><option value="62">Djibouti</option><option value="63">Dominica</option><option value="64">Dominican Republic</option><option value="65">Ecuador</option><option value="66">Egypt</option><option value="67">El Salvador</option><option value="68">Equatorial Guinea</option><option value="69">Eritrea</option><option value="70">Estonia</option><option value="71">Ethiopia</option><option value="72">Falkland Islands array(Malvinas)</option><option value="73">Faroe Islands</option><option value="74">Fiji</option><option value="75">Finland</option><option value="76">France</option><option value="77">French Guiana</option><option value="78">French Polynesia</option><option value="79">French Southern Territories</option><option value="80">Gabon</option><option value="81">Gambia</option><option value="82">Georgia</option><option value="83">Germany</option><option value="84">Ghana</option><option value="85">Gibraltar</option><option value="86">Greece</option><option value="87">Greenland</option><option value="88">Grenada</option><option value="89">Guadeloupe</option><option value="90">Guam</option><option value="91">Guatemala</option><option value="92">Guernsey</option><option value="93">Guinea</option><option value="94">Guinea-Bissau</option><option value="95">Guyana</option><option value="96">Haiti</option><option value="97">Heard Island and McDonald Islands</option><option value="98">Holy See array(Vatican City State)</option><option value="99">Honduras</option><option value="100">Hong Kong</option><option value="101">Hungary</option><option value="102">Iceland</option><option value="103">India</option><option value="104">Indonesia</option><option value="105">Iran, Islamic Republic of</option><option value="106">Iraq</option><option value="107">Ireland</option><option value="108">Isle of Man</option><option value="109">Israel</option><option value="110">Italy</option><option value="111">Jamaica</option><option value="112">Japan</option><option value="113">Jersey</option><option value="114">Jordan</option><option value="115">Kazakhstan</option><option value="116">Kenya</option><option value="117">Kiribati</option><option value="118">Korea, Democratic People's Republic of</option><option value="119">Korea, Republic of</option><option value="120">Kuwait</option><option value="121">Kyrgyzstan</option><option value="122">Lao People's Democratic Republic</option><option value="123">Latvia</option><option value="124">Lebanon</option><option value="125">Lesotho</option><option value="126">Liberia</option><option value="127">Libya</option><option value="128">Liechtenstein</option><option value="129">Lithuania</option><option value="130">Luxembourg</option><option value="131">Macao</option><option value="132">Macedonia, The Former Yugoslav Republic of</option><option value="133">Madagascar</option><option value="134">Malawi</option><option value="135">Malaysia</option><option value="136">Maldives</option><option value="137">Mali</option><option value="138">Malta</option><option value="139">Marshall Islands</option><option value="140">Martinique</option><option value="141">Mauritania</option><option value="142">Mauritius</option><option value="143">Mayotte</option><option value="144">Mexico</option><option value="145">Micronesia, Federated States of</option><option value="146">Moldova, Republic of</option><option value="147">Monaco</option><option value="148">Mongolia</option><option value="149">Montenegro</option><option value="150">Montserrat</option><option value="151">Morocco</option><option value="152">Mozambique</option><option value="153">Myanmar</option><option value="154">Namibia</option><option value="155">Nauru</option><option value="156">Nepal</option><option value="157">Netherlands</option><option value="158">New Caledonia</option><option value="159">New Zealand</option><option value="160">Nicaragua</option><option value="161">Niger</option><option value="162">Nigeria</option><option value="163">Niue</option><option value="164">Norfolk Island</option><option value="165">Northern Mariana Islands</option><option value="166">Norway</option><option value="167">Oman</option><option value="168">Pakistan</option><option value="169">Palau</option><option value="170">Palestine, State of</option><option value="171">Panama</option><option value="172">Papua New Guinea</option><option value="173">Paraguay</option><option value="174">Peru</option><option value="175">Philippines</option><option value="176">Pitcairn</option><option value="177">Poland</option><option value="178">Portugal</option><option value="179">Puerto Rico</option><option value="180">Qatar</option><option value="181">Réunion</option><option value="182">Romania</option><option value="183">Russian Federation</option><option value="184">Rwanda</option><option value="185">Saint Barthélemy</option><option value="186">Saint Helena, Ascension and Tristan da Cunha</option><option value="187">Saint Kitts and Nevis</option><option value="188">Saint Lucia</option><option value="189">Saint Martin array(French part)</option><option value="190">Saint Pierre and Miquelon</option><option value="191">Saint Vincent and the Grenadines</option><option value="192">Samoa</option><option value="193">San Marino</option><option value="194">Sao Tome and Principe</option><option value="195">Saudi Arabia</option><option value="196">Senegal</option><option value="197">Serbia</option><option value="198">Seychelles</option><option value="199">Sierra Leone</option><option value="200">Singapore</option><option value="201">Sint Maarten array(Dutch part)</option><option value="202">Slovakia</option><option value="203">Slovenia</option><option value="204">Solomon Islands</option><option value="205">Somalia</option><option value="206">South Africa</option><option value="207">South Georgia and the South Sandwich Islands</option><option value="208">South Sudan</option><option value="209">Spain</option><option value="210">Sri Lanka</option><option value="211">Sudan</option><option value="212">Suriname</option><option value="213">Svalbard and Jan Mayen</option><option value="214">Swaziland</option><option value="215">Sweden</option><option value="216">Switzerland</option><option value="217">Syrian Arab Republic</option><option value="218">Taiwan, Province of China</option><option value="219">Tajikistan</option><option value="220">Tanzania, United Republic of</option><option value="221">Thailand</option><option value="222">Timor-Leste</option><option value="223">Togo</option><option value="224">Tokelau</option><option value="225">Tonga</option><option value="226">Trinidad and Tobago</option><option value="227">Tunisia</option><option value="228">Turkey</option><option value="229">Turkmenistan</option><option value="230">Turks and Caicos Islands</option><option value="231">Tuvalu</option><option value="232">Uganda</option><option value="233">Ukraine</option><option value="234">United Arab Emirates</option><option value="235">United Kingdom</option><option value="236">United States</option><option value="237">United States Minor Outlying Islands</option><option value="238">Uruguay</option><option value="239">Uzbekistan</option><option value="240">Vanuatu</option><option value="241">Venezuela, Bolivarian Republic of</option><option value="242">Viet Nam</option><option value="243">Virgin Islands, British</option><option value="244">Virgin Islands, U.S.</option><option value="245">Wallis and Futuna</option><option value="246">Western Sahara</option><option value="247">Yemen</option><option value="248">Zambia</option><option value="249">Zimbabwe</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Organization(*):</b></td>
+							<td><input id="Organization2" name="Organization2" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Web site:</b></td>
+							<td><input id="website2" name="website2" type="text" maxlength="43" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  name="mycheckbox[]" value="" /><b>corresponding autho</b>r<br /><br /></td>
+							<td></td>
+						</tr>
+					</table>
+				</tr>
+				<br />
+				<br />
+				<h2>Author 3 </h2>
+				<tr><!-- tkhird Row contains one table -->
+					<table border="0" cellpadding="5" cellspacing="0" width="600" bordercolor="black" frame="box">
+						<tr>
+							<td><b>First name (*):</b></td>
+							<td><input id="FirstName3" name="FirstName3" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Last name (*):</b></td>
+							<td><input id="LastName3" name="LastName3" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Email address(*):</b></td>
+							<td><input id="FromEmailAddress3" name="FromEmailAddress3" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Country(*):</b></td>
+							<td><select id="Country3" name="Country3" maxlength="120" style="width:250px; border:1px solid #999999"> 
+                                    <option value="">-- Choose--</option><option value="1">Afghanistan</option><option value="2">Åland Islands</option><option value="3">Albania</option><option value="4">Algeria</option><option value="5">American Samoa</option><option value="6">Andorra</option><option value="7">Angola</option><option value="8">Anguilla</option><option value="9">Antarctica</option><option value="10">Antigua and Barbuda</option><option value="11">Argentina</option><option value="12">Armenia</option><option value="13">Aruba</option><option value="14">Australia</option><option value="15">Austria</option><option value="16">Azerbaijan</option><option value="17">Bahamas</option><option value="18">Bahrain</option><option value="19">Bangladesh</option><option value="20">Barbados</option><option value="21">Belarus</option><option value="22">Belgium</option><option value="23">Belize</option><option value="24">Benin</option><option value="25">Bermuda</option><option value="26">Bhutan</option><option value="27">Bolivia, Plurinational State of</option><option value="28">Bonaire, Sint Eustatius and Saba</option><option value="29">Bosnia and Herzegovina</option><option value="30">Botswana</option><option value="31">Bouvet Island</option><option value="32">Brazil</option><option value="33">British Indian Ocean Territory</option><option value="34">Brunei Darussalam</option><option value="35">Bulgaria</option><option value="36">Burkina Faso</option><option value="37">Burundi</option><option value="38">Cambodia</option><option value="39">Cameroon</option><option value="40">Canada</option><option value="41">Cape Verde</option><option value="42">Cayman Islands</option><option value="43">Central African Republic</option><option value="44">Chad</option><option value="45">Chile</option><option value="46">China</option><option value="47">Christmas Island</option><option value="48">Cocos array(Keeling) Islands</option><option value="49">Colombia</option><option value="50">Comoros</option><option value="51">Congo</option><option value="52">Congo, the Democratic Republic of the</option><option value="53">Cook Islands</option><option value="54">Costa Rica</option><option value="55">Côte d'Ivoire</option><option value="56">Croatia</option><option value="57">Cuba</option><option value="58">Curaçao</option><option value="59">Cyprus</option><option value="60">Czech Republic</option><option value="61">Denmark</option><option value="62">Djibouti</option><option value="63">Dominica</option><option value="64">Dominican Republic</option><option value="65">Ecuador</option><option value="66">Egypt</option><option value="67">El Salvador</option><option value="68">Equatorial Guinea</option><option value="69">Eritrea</option><option value="70">Estonia</option><option value="71">Ethiopia</option><option value="72">Falkland Islands array(Malvinas)</option><option value="73">Faroe Islands</option><option value="74">Fiji</option><option value="75">Finland</option><option value="76">France</option><option value="77">French Guiana</option><option value="78">French Polynesia</option><option value="79">French Southern Territories</option><option value="80">Gabon</option><option value="81">Gambia</option><option value="82">Georgia</option><option value="83">Germany</option><option value="84">Ghana</option><option value="85">Gibraltar</option><option value="86">Greece</option><option value="87">Greenland</option><option value="88">Grenada</option><option value="89">Guadeloupe</option><option value="90">Guam</option><option value="91">Guatemala</option><option value="92">Guernsey</option><option value="93">Guinea</option><option value="94">Guinea-Bissau</option><option value="95">Guyana</option><option value="96">Haiti</option><option value="97">Heard Island and McDonald Islands</option><option value="98">Holy See array(Vatican City State)</option><option value="99">Honduras</option><option value="100">Hong Kong</option><option value="101">Hungary</option><option value="102">Iceland</option><option value="103">India</option><option value="104">Indonesia</option><option value="105">Iran, Islamic Republic of</option><option value="106">Iraq</option><option value="107">Ireland</option><option value="108">Isle of Man</option><option value="109">Israel</option><option value="110">Italy</option><option value="111">Jamaica</option><option value="112">Japan</option><option value="113">Jersey</option><option value="114">Jordan</option><option value="115">Kazakhstan</option><option value="116">Kenya</option><option value="117">Kiribati</option><option value="118">Korea, Democratic People's Republic of</option><option value="119">Korea, Republic of</option><option value="120">Kuwait</option><option value="121">Kyrgyzstan</option><option value="122">Lao People's Democratic Republic</option><option value="123">Latvia</option><option value="124">Lebanon</option><option value="125">Lesotho</option><option value="126">Liberia</option><option value="127">Libya</option><option value="128">Liechtenstein</option><option value="129">Lithuania</option><option value="130">Luxembourg</option><option value="131">Macao</option><option value="132">Macedonia, The Former Yugoslav Republic of</option><option value="133">Madagascar</option><option value="134">Malawi</option><option value="135">Malaysia</option><option value="136">Maldives</option><option value="137">Mali</option><option value="138">Malta</option><option value="139">Marshall Islands</option><option value="140">Martinique</option><option value="141">Mauritania</option><option value="142">Mauritius</option><option value="143">Mayotte</option><option value="144">Mexico</option><option value="145">Micronesia, Federated States of</option><option value="146">Moldova, Republic of</option><option value="147">Monaco</option><option value="148">Mongolia</option><option value="149">Montenegro</option><option value="150">Montserrat</option><option value="151">Morocco</option><option value="152">Mozambique</option><option value="153">Myanmar</option><option value="154">Namibia</option><option value="155">Nauru</option><option value="156">Nepal</option><option value="157">Netherlands</option><option value="158">New Caledonia</option><option value="159">New Zealand</option><option value="160">Nicaragua</option><option value="161">Niger</option><option value="162">Nigeria</option><option value="163">Niue</option><option value="164">Norfolk Island</option><option value="165">Northern Mariana Islands</option><option value="166">Norway</option><option value="167">Oman</option><option value="168">Pakistan</option><option value="169">Palau</option><option value="170">Palestine, State of</option><option value="171">Panama</option><option value="172">Papua New Guinea</option><option value="173">Paraguay</option><option value="174">Peru</option><option value="175">Philippines</option><option value="176">Pitcairn</option><option value="177">Poland</option><option value="178">Portugal</option><option value="179">Puerto Rico</option><option value="180">Qatar</option><option value="181">Réunion</option><option value="182">Romania</option><option value="183">Russian Federation</option><option value="184">Rwanda</option><option value="185">Saint Barthélemy</option><option value="186">Saint Helena, Ascension and Tristan da Cunha</option><option value="187">Saint Kitts and Nevis</option><option value="188">Saint Lucia</option><option value="189">Saint Martin array(French part)</option><option value="190">Saint Pierre and Miquelon</option><option value="191">Saint Vincent and the Grenadines</option><option value="192">Samoa</option><option value="193">San Marino</option><option value="194">Sao Tome and Principe</option><option value="195">Saudi Arabia</option><option value="196">Senegal</option><option value="197">Serbia</option><option value="198">Seychelles</option><option value="199">Sierra Leone</option><option value="200">Singapore</option><option value="201">Sint Maarten array(Dutch part)</option><option value="202">Slovakia</option><option value="203">Slovenia</option><option value="204">Solomon Islands</option><option value="205">Somalia</option><option value="206">South Africa</option><option value="207">South Georgia and the South Sandwich Islands</option><option value="208">South Sudan</option><option value="209">Spain</option><option value="210">Sri Lanka</option><option value="211">Sudan</option><option value="212">Suriname</option><option value="213">Svalbard and Jan Mayen</option><option value="214">Swaziland</option><option value="215">Sweden</option><option value="216">Switzerland</option><option value="217">Syrian Arab Republic</option><option value="218">Taiwan, Province of China</option><option value="219">Tajikistan</option><option value="220">Tanzania, United Republic of</option><option value="221">Thailand</option><option value="222">Timor-Leste</option><option value="223">Togo</option><option value="224">Tokelau</option><option value="225">Tonga</option><option value="226">Trinidad and Tobago</option><option value="227">Tunisia</option><option value="228">Turkey</option><option value="229">Turkmenistan</option><option value="230">Turks and Caicos Islands</option><option value="231">Tuvalu</option><option value="232">Uganda</option><option value="233">Ukraine</option><option value="234">United Arab Emirates</option><option value="235">United Kingdom</option><option value="236">United States</option><option value="237">United States Minor Outlying Islands</option><option value="238">Uruguay</option><option value="239">Uzbekistan</option><option value="240">Vanuatu</option><option value="241">Venezuela, Bolivarian Republic of</option><option value="242">Viet Nam</option><option value="243">Virgin Islands, British</option><option value="244">Virgin Islands, U.S.</option><option value="245">Wallis and Futuna</option><option value="246">Western Sahara</option><option value="247">Yemen</option><option value="248">Zambia</option><option value="249">Zimbabwe</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Organization(*):</b></td>
+							<td><input id="Organization3" name="Organization3" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Web site:</b></td>
+							<td><input id="website3" name="website3" type="text" maxlength="43" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  name="mycheckbox[]" value="" /><b>corresponding autho</b>r<br /><br /></td>
+							<td></td>
+						</tr>
+					</table>
+				</tr>		
+				<br />
+				<br />
+				<tr><!-- Forth Row contains one table -->
+					<table border="0" cellpadding="5" cellspacing="0" width="600" bordercolor="black" frame="box">
+						<tr>
+							<td><b>Title (*)::</b></td>
+							<td><input id="title" name="title" type="text" maxlength="60" style="width:300px; border:1px solid #999999" /></td>
+						</tr>
+						<tr>
+							<td><b>Abstract (*):</b></td>
+							<td><textarea id="abstract" cols="60" rows="10" name="abstract" type="text" maxlength="600" style="width:300px; border:1px solid #999999" /></textarea></td>
+						</tr>
+					</table>
+				</tr>
+				<br />
+				<br />
+				<tr><!-- Fifth Row contains one table -->
+					<table border="0" cellpadding="5" cellspacing="0" width="600" bordercolor="black" frame="box">
+						<tr>
+							<td><b>Keywords (*):</b></td>
+							<td><textarea id="keyword" cols="40" rows="10" name="keyword" type="text" maxlength="600" style="width:300px; border:1px solid #999999" /></textarea></td>
+						</tr>
+					</table>
+				</tr>
+				<br />
+				<br />
+				<tr><!-- six Row contains one table -->
+					<table border="0" cellpadding="5" cellspacing="0" width="600" bordercolor="black" frame="box">
+						<tr>
+							<td><pre>The following part of the submission form was added by issc2016. It has neither been checked nor endorsed by ISSR Conf</pre></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><pre><b>Paper.</b>Upload your paper. The paper must be in PDF format (file extension .pdf)</pre></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>    <input type="file" name="fileToUpload" id="fileToUpload">
+							<td></td>
+						</tr>
+					</table>
+				</tr>
+				<br />
+				<br />
+				<tr><!-- seven row contains one table -->
+					<td colspan="0" align="center">
+					<br />
+						<!-- <table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td colspan="2" style="padding-bottom:18px;">
+							<a href="http://www.snaphost.com/captcha/" alt="form with captcha" title="form with captcha"style="text-decoration:none; font-size:11px; font-family:Verdana, Arial, Helvetica; color:#000099;">This web form is protected from SPAM by<span style="text-decoration:underline;">SnapHost.com</span></a>
+							</td>
+						</tr>
+						<tr valign="top">
+							<td>
+							<i>Enter web form code*:</i>
+							<input id="skip_CaptchaCode" name="skip_CaptchaCode" type="text" style="width:80px; border:1px solid #999999" maxlength="6" />
+							</td>
+							<td>
+							<a href="http://www.snaphost.com/captcha/TellFriend.aspx"><img id="CaptchaImage" alt="referral form sample" title="referral form sample"style="margin-left:20px; border:1px solid #999999"src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=4JBARP59BK8Y&ImgType=2" /></a>
+							<br />
+							<a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a>
+							</td>
+						</tr>
+						</table>-->
+						<br />
+						* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input id="skip_Submit" name="skip_Submit" type="submit" value="Submit" />
+					</td>
+				
+				</tr>
+			</table>
+		</form>
+
+  <div id="footer">
+    <div class="footbox">
+      <h2>Address</h2>
+      <ul>
+        <li><a href="#">Mailing Address: 5 Ahmed Zewail St. - formerly Tharwat - Orman - Giza.</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Zip</h2>
+      <ul>
+        <li><a href="#">12613</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Tel</h2>
+      <ul>
+        <li><a href="#">33358355 - 33358496</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>E-mail</h2>
+      <ul>
+        <li><a href="http://dean_issr@cu.edu.eg">dean_issr@cu.edu.eg</a></li>
+      </ul>
+    </div>
+    <div class="footbox last">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="http://issr.cu.edu.eg/ar/home/">Main Page</a></li>
+        <li><a href="http://issr.cu.edu.eg/ar/home/">Call Us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Institute of Statistical Studies and Research - Cairo University<a href="#"></a></p>
+    <p class="fl_right">ISSR<a target="_blank" href="http://127.0.0.1:8887/home/master_project/homepage.html" title="Free Conference Website">-System</a></p>
+    <br class="clear" />
+  </div>
+
+</body>
+</html>
